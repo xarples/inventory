@@ -1,0 +1,22 @@
+{
+  "name": "@xarples/inventory-db",
+  "version": "0.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "generate": "prisma generate",
+    "push": "prisma db push --accept-data-loss --force-reset",
+    "seed": "ts-node ./src/seed.ts --compiler-options \"{\\\"module\\\":\\\"commonjs\\\"}\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "prisma": "^2.27.0"
+  },
+  "dependencies": {
+    "@prisma/client": "^2.27.0",
+    "date-fns": "^2.22.1"
+  }
+}

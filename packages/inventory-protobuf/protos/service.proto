@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package auth;
+
+import "inventory.proto";
+
+service IAM {
+  rpc CreateInventory(inventory.Inventory) returns (inventory.Inventory) {}
+  rpc GetInventory(inventory.Inventory) returns (inventory.Inventory) {}
+  rpc ListInventoriess(inventory.Inventory) returns (inventory.InventoryList) {}
+  rpc UpdateInventory(inventory.Inventory) returns (inventory.Inventory) {}
+  rpc DeleteInventory(inventory.Inventory) returns (inventory.Inventory) {}
+
+}
+
+

@@ -1,0 +1,19 @@
+{
+  "name": "@xarples/inventory-service",
+  "version": "0.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@xarples/inventory-db": "^0.0.0",
+    "@xarples/inventory-protobuf": "^0.0.0",
+    "@xarples/accounts-jwt-verifier": "0.0.8-alpha.0"
+  },
+  "devDependencies": {}
+}

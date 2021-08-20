@@ -1,0 +1,19 @@
+{
+  "name": "@xarples/inventory-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "build": "tsc",
+    "dev": "nodemon",
+    "start": "node dist/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@xarples/inventory-protobuf": "^0.0.0",
+    "@xarples/inventory-service": "^0.0.0"
+  }
+}

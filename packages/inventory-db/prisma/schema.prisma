@@ -13,7 +13,7 @@ generator client {
 
 model Inventory {
   id          String   @id @default(cuid())
-  user_id     String
+  owner_id    String
   name        String
   description String?
   created_at  DateTime @default(now())
@@ -29,7 +29,7 @@ model Product {
   id           String   @id @default(cuid())
   category_id  String
   inventory_id String?
-  user_id      String
+  owner_id     String
   name         String
   description  String?
   metadata     Json?
@@ -46,7 +46,7 @@ model Category {
   id           String   @id @default(cuid())
   category_id  String?
   inventory_id String?
-  user_id      String
+  owner_id     String
   name         String
   description  String?
   metadata     Json?

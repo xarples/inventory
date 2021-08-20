@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package category;
+
+message Category {
+  string id = 1;
+  string category_id = 2;
+  string inventory_id = 3;
+  string owner_id = 4;
+  string name = 5;
+  string description = 6;
+  string created_at = 7;
+  string updated_at = 8;
+}
+
+message CategoryList {
+  repeated Category category = 1;
+}

@@ -4,7 +4,7 @@ package inventory;
 
 message Inventory {
   string id = 1;
-  string user_id = 2;
+  string owner_id = 2;
   string name = 3;
   string description = 4;
   string created_at = 5;

@@ -2,14 +2,28 @@ syntax = "proto3";
 
 package auth;
 
+import "category.proto";
 import "inventory.proto";
+import "product.proto";
 
-service IAM {
+service Inventory {
+  rpc CreateCategory(category.Category) returns (category.Category) {}
+  rpc GetCategory(category.Category) returns (category.Category) {}
+  rpc ListCategories(category.Category) returns (category.CategoryList) {}
+  rpc UpdateCategory(category.Category) returns (category.Category) {}
+  rpc DeleteCategory(category.Category) returns (category.Category) {}
+
   rpc CreateInventory(inventory.Inventory) returns (inventory.Inventory) {}
   rpc GetInventory(inventory.Inventory) returns (inventory.Inventory) {}
-  rpc ListInventoriess(inventory.Inventory) returns (inventory.InventoryList) {}
+  rpc ListInventories(inventory.Inventory) returns (inventory.InventoryList) {}
   rpc UpdateInventory(inventory.Inventory) returns (inventory.Inventory) {}
   rpc DeleteInventory(inventory.Inventory) returns (inventory.Inventory) {}
+
+  rpc CreateProduct(product.Product) returns (product.Product) {}
+  rpc GetProduct(product.Product) returns (product.Product) {}
+  rpc ListProducts(product.Product) returns (product.ProductList) {}
+  rpc UpdateProduct(product.Product) returns (product.Product) {}
+  rpc DeleteProduct(product.Product) returns (product.Product) {}
 
 }
 

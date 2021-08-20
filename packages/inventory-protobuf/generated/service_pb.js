@@ -15,5 +15,9 @@ var jspb = require('google-protobuf');
 var goog = jspb;
 var global = Function('return this')();
 
+var category_pb = require('./category_pb.js');
+goog.object.extend(proto, category_pb);
 var inventory_pb = require('./inventory_pb.js');
 goog.object.extend(proto, inventory_pb);
+var product_pb = require('./product_pb.js');
+goog.object.extend(proto, product_pb);

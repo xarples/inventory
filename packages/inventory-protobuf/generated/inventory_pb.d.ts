@@ -9,8 +9,8 @@ import * as jspb from "google-protobuf";
 export class Inventory extends jspb.Message { 
     getId(): string;
     setId(value: string): Inventory;
-    getUserId(): string;
-    setUserId(value: string): Inventory;
+    getOwnerId(): string;
+    setOwnerId(value: string): Inventory;
     getName(): string;
     setName(value: string): Inventory;
     getDescription(): string;
@@ -33,7 +33,7 @@ export class Inventory extends jspb.Message {
 export namespace Inventory {
     export type AsObject = {
         id: string,
-        userId: string,
+        ownerId: string,
         name: string,
         description: string,
         createdAt: string,

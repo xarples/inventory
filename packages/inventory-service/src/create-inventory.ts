@@ -11,7 +11,7 @@ export async function createInventory(
 
     const created = await db.inventory.create({
       data: {
-        user_id: request.userId,
+        owner_id: request.ownerId,
         name: request.name,
         description: request.description
       }

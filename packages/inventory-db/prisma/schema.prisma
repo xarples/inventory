@@ -11,6 +11,25 @@ generator client {
   previewFeatures = ["referentialActions"]
 }
 
+model Category {
+  id           String   @id @default(cuid())
+  category_id  String?
+  inventory_id String?
+  owner_id     String
+  name         String
+  description  String?
+  metadata     Json?
+  created_at   DateTime @default(now())
+  updated_at   DateTime @updatedAt
+
+  Category   Category?  @relation("CategoryToCategory", fields: [category_id], references: [id])
+  Categories Category[] @relation("CategoryToCategory")
+  Inventory  Inventory? @relation(fields: [inventory_id], references: [id])
+  Products   Product[]
+
+  @@map(name: "categories")
+}
+
 model Inventory {
   id          String   @id @default(cuid())
   owner_id    String
@@ -40,23 +59,4 @@ model Product {
   Inventory Inventory? @relation(fields: [inventory_id], references: [id])
 
   @@map(name: "products")
-}
-
-model Category {
-  id           String   @id @default(cuid())
-  category_id  String?
-  inventory_id String?
-  owner_id     String
-  name         String
-  description  String?
-  metadata     Json?
-  created_at   DateTime @default(now())
-  updated_at   DateTime @updatedAt
-
-  Category   Category?  @relation("CategoryToCategory", fields: [category_id], references: [id])
-  Categories Category[] @relation("CategoryToCategory")
-  Inventory  Inventory? @relation(fields: [inventory_id], references: [id])
-  Products   Product[]
-
-  @@map(name: "categories")
 }
